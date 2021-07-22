@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::post('/invite','App\Http\Controllers\Api\UserController@invite');
 
 Route::post('/accept-invite','App\Http\Controllers\Api\UserController@acceptInvite');
 

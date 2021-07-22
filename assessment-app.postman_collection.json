@@ -1,0 +1,213 @@
+{
+	"variables": [],
+	"info": {
+		"name": "assessment-app",
+		"_postman_id": "5c26019e-4430-0c95-b313-61f1ba3f502d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/invite",
+			"request": {
+				"url": "http://localhost:8000/api/invite",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|y36RtF05ZoFT9tWtZNZYjldCQcNL7wKz6gweIjrT",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jack.m132@mailinator.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "invitation api\n\nemail require"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/accept-invite",
+			"request": {
+				"url": "http://localhost:8000/api/accept-invite",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "$2y$10$GOP1/Lka67oNJxZvhIq9N.Zh9WZriL.G.BrcnhMVs43OpTy54/4MS",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "jack",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "complete signup\n\ntoken\nusername\npassword"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/login",
+			"request": {
+				"url": "http://localhost:8000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "login api\n\nusername\npassword"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/update-profile",
+			"request": {
+				"url": "http://localhost:8000/api/update-profile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|ehGBKnVdpT5plRaQ73JBz0rBdUGXqnNl45DRiPIG",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "jack",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jack.m1@mailinator.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"description": "",
+							"type": "file",
+							"src": "2021-07-10_0-25-16.png"
+						}
+					]
+				},
+				"description": "update profile api\n\nusername\nemail\navatar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/verify",
+			"request": {
+				"url": "http://localhost:8000/api/verify",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jack",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "439688",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "verify pin api\n\nusername\npin"
+			},
+			"response": []
+		}
+	]
+}
