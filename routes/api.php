@@ -29,6 +29,8 @@ Route::post('/login','App\Http\Controllers\Api\UserController@login');
 
 Route::middleware(['auth:sanctum'])->group(function () {
 
+Route::post('/invite','App\Http\Controllers\Api\UserController@invite')->middleware('admin');
+
 Route::post('/update-profile','App\Http\Controllers\Api\UserController@updateProfile');
 
 
